@@ -1,10 +1,11 @@
 package LineCoverageTest;
 
+import org.example.CorrectedPalindrome;
 import org.example.Palindrome;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestTemplate;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class Exo1Test {
 
@@ -15,7 +16,26 @@ public class Exo1Test {
         assertTrue(Palindrome.isPalindrome("radar"));
         assertFalse(Palindrome.isPalindrome("OpenAI"));
         assertFalse(Palindrome.isPalindrome("not palindrome"));
-        assertFalse(Palindrome.isPalindrome(null));
+
+
     }
 
-}
+    @Test
+    public void testIsPalindromeCorrected() {
+        assertTrue(CorrectedPalindrome.isPalindrome("radar"));
+        assertFalse(CorrectedPalindrome.isPalindrome("OpenAI"));
+        assertFalse(CorrectedPalindrome.isPalindrome("not palindrome"));
+
+
+    }
+
+    @Test
+    public void testIsPalindrome_NullArgument() {
+        // Test de cas où la chaîne est null
+        assertThrows(NullPointerException.class, () -> {
+            CorrectedPalindrome.isPalindrome(null);
+        });
+    }
+    }
+
+
