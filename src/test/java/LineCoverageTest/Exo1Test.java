@@ -12,8 +12,7 @@ public class Exo1Test {
 
     @Test
     public void testIsPalindrome() {
-        // Test de cas où la chaîne est un palindrome
-        assertTrue(Palindrome.isPalindrome("radar"));
+        assertTrue(Palindrome.isPalindrome("rad"));
     }
 
 }
