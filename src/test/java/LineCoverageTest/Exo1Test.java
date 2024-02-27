@@ -12,7 +12,10 @@ public class Exo1Test {
 
     @Test
     public void testIsPalindrome() {
-        assertTrue(Palindrome.isPalindrome("rad"));
+        assertTrue(Palindrome.isPalindrome("radar"));
+        assertFalse(Palindrome.isPalindrome("OpenAI"));
+        assertFalse(Palindrome.isPalindrome("not palindrome"));
+        assertFalse(Palindrome.isPalindrome(null));
     }
 
 }
